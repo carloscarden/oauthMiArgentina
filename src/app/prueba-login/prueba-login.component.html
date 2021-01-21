@@ -1,0 +1,7 @@
+<p >
+    {{ (user$ | async)?.getGivenName() | titlecase }}
+</p>
+
+
+
+<button *ngIf="!(user$ | async)"  (click)="goToLogin()"> Iniciar Sesión</button>
